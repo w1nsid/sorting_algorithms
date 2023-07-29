@@ -72,7 +72,7 @@ void lomuto_quick_sort(
 }
 
 /**
- * execute_quick_sort - Implements quick sort on an array using
+ * quick_sort - Implements quick sort on an array using
  * the Lomuto's partitioning method.
  *
  * @input_array: The array to sort.
@@ -80,7 +80,7 @@ void lomuto_quick_sort(
  *
  * Return: Nothing.
  */
-void execute_quick_sort(int *input_array, size_t array_len)
+void quick_sort(int *input_array, size_t array_len)
 {
 	if (input_array != NULL)
 	{
