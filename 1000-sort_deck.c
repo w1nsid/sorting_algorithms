@@ -54,10 +54,10 @@ int card_value_to_int(const char *card_value)
 }
 
 /**
- * arrange_deck - function to sort deck of cards in order of suit and value
+ * sort_deck - function to sort deck of cards in order of suit and value
  * @deck: pointer to head of linked list of 52 card deck
  */
-void arrange_deck(deck_node_t **deck)
+void sort_deck(deck_node_t **deck)
 {
 	deck_node_t *deck_in_array[54], *node_head;
 	size_t index;
