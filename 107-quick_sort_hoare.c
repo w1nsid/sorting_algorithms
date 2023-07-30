@@ -50,12 +50,10 @@ int apply_hoare_partition(
 	pivot = array[end_idx];
 	for (upper = start_idx - 1, lower = end_idx + 1; upper < lower;)
 	{
-		do
-		{
+		do {
 			upper++;
 		} while (array[upper] < pivot);
-		do
-		{
+		do {
 			lower--;
 		} while (array[lower] > pivot);
 
@@ -71,29 +69,29 @@ int apply_hoare_partition(
 
 /**
  * hoare_quick_sort - Implement the quicksort algorithm through recursion.
- * @array: An array of integers to sort.
+ * @arr: An array of integers to sort.
  * @array_size: The size of the array.
  * @start_idx: The starting index of the array partition to order.
  * @end_idx: The ending index of the array partition to order.
  *
  * Description: Uses the Hoare partition scheme.
  */
-void hoare_quick_sort(int *array, size_t array_size, int start_idx, int end_idx)
+void hoare_quick_sort(int *arr, size_t array_size, int start_idx, int end_idx)
 {
 	int partition_idx;
 
 	if (end_idx - start_idx > 0)
 	{
 		partition_idx =
-			apply_hoare_partition(array, array_size, start_idx, end_idx);
-		hoare_quick_sort(array, array_size, start_idx, partition_idx - 1);
-		hoare_quick_sort(array, array_size, partition_idx, end_idx);
+			apply_hoare_partition(arr, array_size, start_idx, end_idx);
+		hoare_quick_sort(arr, array_size, start_idx, partition_idx - 1);
+		hoare_quick_sort(arr, array_size, partition_idx, end_idx);
 	}
 }
 
 /**
  * quick_sort_hoare - Sort an array of integers in ascending
- *                    order using the quicksort algorithm.
+ *                             order using the quicksort algorithm.
  * @array: An array of integers.
  * @array_size: The size of the array.
  *
