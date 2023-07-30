@@ -27,13 +27,13 @@ void shell_sort(int *a, size_t s)
 					a[i + g] = v;
 					for (t = i; t >= g; t -= g)
 					{
-						if (a[t] < a[t - g])
-						{
-							v = a[t];
-							a[t] = a[t - g];
-							a[t - g] = v;
-						} else
-							break;
+					if (a[t] < a[t - g])
+					{
+						v = a[t];
+						a[t] = a[t - g];
+						a[t - g] = v;
+					} else
+						break;
 					}
 				} else
 					i += g;
